@@ -1,7 +1,6 @@
 # Overview
 
-This system manages files on a local filesystem using the **bucket abstraction**.
-Each bucket is a self-contained unit consisting of:
+This system manages files on a local filesystem using the **bucket abstraction**. Each bucket is a self-contained unit consisting of:
 
 * **Bucket backend** — handles file storage (`get`, `put`, `delete`, `exists`).
 * **Metadata engine** — tracks metadata for stored files in an append-only model.
