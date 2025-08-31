@@ -11,13 +11,11 @@ requires-python = ">=3.8"
 license = "MIT"
 keywords = []
 authors = [
-  { name = "dev", email = "dev@local" },
+  { name = "dev", email = "dev4dojo@outlook.com" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -27,22 +25,20 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/dev/bucket#readme"
-Issues = "https://github.com/dev/bucket/issues"
-Source = "https://github.com/dev/bucket"
+Documentation = "https://github.com/dev4dojo/bucket#readme"
+Issues = "https://github.com/dev4dojo/bucket/issues"
+Source = "https://github.com/dev4dojo/bucket"
+
+# [project.optional-dependencies]
+# sqlite = ["sqlalchemy>=2.0"]
+# s3 = ["boto3>=1.28"]
+# gcs = ["google-cloud-storage>=2.0"]
 
 [tool.hatch.version]
 path = "src/bucket/__about__.py"
 
-[tool.hatch.envs.types]
-extra-dependencies = [
-  "mypy>=1.0.0",
-]
-[tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/bucket tests}"
-
 [tool.coverage.run]
-source_pkgs = ["bucket", "tests"]
+source_pkgs = ["bucket"]
 branch = true
 parallel = true
 omit = [
@@ -50,8 +46,8 @@ omit = [
 ]
 
 [tool.coverage.paths]
-bucket = ["src/bucket", "*/bucket/src/bucket"]
-tests = ["tests", "*/bucket/tests"]
+bucket = ["src/bucket"]
+tests = ["tests"]
 
 [tool.coverage.report]
 exclude_lines = [
